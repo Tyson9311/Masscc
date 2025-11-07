@@ -1,8 +1,8 @@
 #bot.py
 
 ##########################
-#Owner:- @Abhinavinaman
-# Join :- t.me/navdish_ff_store
+#Owner:- @GuardianXGroot
+# Join :- t.me/Groot_Virtual_Store
 ############################
 import logging
 import json
@@ -20,17 +20,17 @@ from telegram.constants import ParseMode
 from telegram.error import BadRequest
 
 #Details Like Bot Token Nigaas 
-BOT_TOKEN = "8365978589:AAEvyB6wgtMkN-wlRASu1JpUJRswjMtLidQ" #add your bot token 
-ADMIN_ID = 6080469761 #change it and add your id
-DEV_CHANNEL_URL = "https://t.me/navdishmehra" #change it your username 
-HYPERLINK_URL = "https://t.me/navdishmehra" #change it and add your youser name 
+BOT_TOKEN = "8539759698:AAGgDtEESiK4c_yqB3ppZn8G7jqpYDonw9E" #add your bot token 
+ADMIN_ID =  8433217535 #change it and add your id
+DEV_CHANNEL_URL = "https://t.me/Darian_kingstonXEra" #change it your username 
+HYPERLINK_URL = "https://t.me/Darian_KingstonXEra" #change it and add your youser name 
 USERS_FILE = 'users.json' #do not change it 
 CODES_FILE = 'codes.json'#do not change it aslo 
 FREE_MINUTES = 60 #i set to 60 minutes you can change it 
-BOT_NAME = "PRINCECHK" #your bot name [ Add stylish Font ] 
+BOT_NAME = "Darian" #your bot name [ Add stylish Font ] 
 BOT_FONT = "𝘼𝙐𝙏𝙃 𝙂𝘼𝙏𝙀𝙎" #do not change it i set this font this looking baadass 
 
-#Proxy Config @Abhinavinaman
+#Proxy Config @GuardianXGroot 
 #Step 1 :- www.webshare.io 
 #step 2 :- Create New Accounts 
 #Step 3 :- You Got Proxy Add Here 
@@ -50,7 +50,7 @@ STRIPE_V2_API = "http://fromdeepweb.gamer.gd/api.php?lista="
 SHOPIFY_V1_API = "https://autoshopify-dark.sevalla.app/index.php"
 SHOPIFY_V2_API = "https://auto-shopify-6cz4.onrender.com/index.php"
 BIN_LOOKUP_API = "https://lookup.binlist.net/" #I Add This You Can Remove 
-#CopyRight By @Abhinavinaman
+#CopyRight By @GuardianXGroot
 #Only Use This Api When Others Api Dose Not Work Okayy 
 
 #API_URL = "http://194.238.22.129:8080/b3?cc="
@@ -123,14 +123,14 @@ async def get_bin_info(bin_num):
     except Exception as e: logger.error(f"BIN lookup failed for {bin_num}: {e}")
     return {"info": "N/A", "bank": "N/A", "country": "N/A"}
 
-#@Abhinavinaman
+#@GuardianXGroot
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     if str(user.id) not in load_data(USERS_FILE):
         set_user_expiry(user.id, FREE_MINUTES)
         await update.message.reply_text(f"🎉 Welcome! Nigga |> You have received a free {FREE_MINUTES}-minute trial.")
 
-    animation_frames = ["P", "PR", "PRI", "PRINC", "PRINCE", f" ⚡{BOT_NAME} ⚡"]
+    animation_frames = ["DA", "DAR", "DARI", "DARIA", "DARIAN", f" ⚡{BOT_NAME} ⚡"]
     msg = await update.message.reply_text(animation_frames[0])
     for frame in animation_frames[1:]:
         try:
@@ -198,14 +198,14 @@ async def handle_cc_check(update: Update, context: ContextTypes.DEFAULT_TYPE, ga
         await update.message.reply_text(f"❌ 𝙈𝙖𝙭 `{actual_max_cards}` 𝙘𝙖𝙧𝙙𝙨 𝙖𝙡𝙡𝙤𝙬𝙚𝙙.")
         return
 
-    #@Abhinavinaman
+    #@GuardianXGroot
     processing_frames = ["▓▒▒▒▒", "▓▓▒▒▒", "▓▓▓▒▒", "▓▓▓▓▒", "▓▓▓▓▓"]
     base_text = (
         f"━━━━━━━━━━━━━━━━━━━\n"
         f"[↯] 𝘾𝘼𝙍𝘿 𝘾𝙃𝙀𝘾𝙆 𝙎𝙏𝘼𝙏𝙐𝙎\n\n"
         f"[↯] 𝙎𝙩𝙖𝙩𝙪𝙨 ↯ 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 %s\n"
         f"[↯] 𝙂𝘼𝙏𝙀 ↯ {gateway_name.upper()}\n"
-        f"[↯] 𝘿𝙀𝙑   ↯ @Abhinavinaman\n"
+        f"[↯] 𝘿𝙀𝙑   ↯ @GuardianXGroot\n"
         f"━━━━━━━━━━━━━━━━━━━"
     )
     processing_msg = await update.message.reply_text(base_text % processing_frames[0])
@@ -258,7 +258,7 @@ async def handle_cc_check(update: Update, context: ContextTypes.DEFAULT_TYPE, ga
             f"{hyper('»')} 𝙋𝙧𝙤𝙭𝙮: `{proxy_to_use}` • `{proxy_status}`\n"
             f"{hyper('»')} 𝙏𝙞𝙢𝙚: `{time_taken}`\n"
             f"{hyper('»')} 𝘾𝙝𝙚𝙘𝙠𝙚𝙙 𝘽𝙮: {update.effective_user.first_name}\n"
-            f"{hyper('»')} 𝘽𝙤𝙩 𝘽𝙮: @Abhinavinaman"
+            f"{hyper('»')} 𝘽𝙤𝙩 𝘽𝙮: @GuardianXGroot"
         )
         await update.message.reply_text(result_text, parse_mode='Markdown', disable_web_page_preview=True)
 
@@ -327,5 +327,5 @@ def setup_handlers(application: Application):
     application.add_handler(CallbackQueryHandler(button_handler))
 
 
-#All Code By @Abhinavinaman
+#All Code By @GuardianXGroot
 
