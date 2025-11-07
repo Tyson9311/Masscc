@@ -19,7 +19,7 @@ def main():
     print(f"Bot started! Admin ID: {ADMIN_ID}")
     print("Polling for updates...")
     
-    #Run-Cmds @Abhinavinaman
+    #Run-Cmds @GuardianXGroot
     application.run_polling()
 
 if __name__ == '__main__':
